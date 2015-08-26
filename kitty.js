@@ -67,7 +67,24 @@ garfieldCat = makeCat({
   weight_lbs : 8.6
   });
 
+dogPrototype = makeMammal({
+  has_tail : true,
+  hello_text : 'ruff'
+  });
+
+// ** cat constructor
+makeDog = function( arg_map ) {
+  var dog = Object.create( dogPrototype );
+  extendObject( dog, arg_map );
+  return dog;
+  };
+
+// ** cat instance
+charlieDog = makeDog({
+  name : 'Charlie',
+  weight_lbs : 8.6
+  });
 // ** cat instance method invocations
-garfieldCat.say_hello();
-garfieldCat.say_text('Purr...');
+charlieDog.say_hello();
+charlieDog.say_text('ruff...');
 
