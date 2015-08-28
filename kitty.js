@@ -72,19 +72,19 @@ dogPrototype = makeMammal({
   hello_text : 'ruff'
   });
 
-// ** cat constructor
+// ** dog constructor
 makeDog = function( arg_map ) {
   var dog = Object.create( dogPrototype );
   extendObject( dog, arg_map );
   return dog;
   };
 
-// ** cat instance
+// ** dog instance
 charlieDog = makeDog({
   name : 'Charlie',
   weight_lbs : 8.6
   });
-// ** cat instance method invocations
+// ** dog instance method invocations
 charlieDog.say_hello();
 charlieDog.say_text('ruff...');
 
